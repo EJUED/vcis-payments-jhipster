@@ -1,0 +1,87 @@
+enum HistoryOriginEnum {
+  POD,
+    Vendas,
+    RecebimentoDeGraos
+}
+
+enum HistoryTypeEnum {
+  TaxaDeBaixaDeVolumeDeIsencao
+    PrecoDaTecnologiaNaMoega
+    SeasonBonus
+    Vendas
+}
+
+
+entity FeeList {
+  id Long
+    documentType String
+    documentNumber String
+    stateRegistration String
+    origin HistoryOriginEnum
+    type HistoryTypeEnum
+    erpCode String
+    crop String
+    revenueModel String
+    month Integer
+    operationalYear Integer
+    percentage String
+    value Double
+    creationDate String
+    updateDate String
+    status String
+    vendor String
+    poNumber String
+}
+
+enum TransactionsStatus {
+  Open,
+    Received,
+    Approved,
+    Rejected,
+    Expired
+}
+
+entity Transaction {
+  id Long
+    paymentForecast Double
+    ourNumber String
+    dueDate LocalDate
+    transactionStatus TransactionsStatus
+    observation String
+    creationDate LocalDate
+    deletionDate LocalDate
+}
+
+entity FeeListTransaction {
+  id Long
+    creationDate LocalDate
+    deletionDate LocalDate
+}
+
+enum InvoicesStatusEnum {
+  Send
+    Approved
+    Rejected
+}
+
+entity Invoice {
+  id Long
+    s3Url String
+    value Double
+    creationDate LocalDate
+    invoiceStatus InvoicesStatus
+}
+
+entity TransactionHistory {
+  id Long
+    user String
+    description String
+    creationDate LocalDate
+}
+
+relationship OneToMany {
+  FeeList to FeeListTransaction{feeList}
+  Transaction to FeeListTransaction{transaction}
+    Transaction to Invoice{transaction}
+    Transaction to TransactionHistory{transaction}
+}
