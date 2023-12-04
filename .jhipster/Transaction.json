@@ -1,0 +1,68 @@
+{
+  "applications": "*",
+  "changelogDate": "20231130182727",
+  "clientRootFolder": "SobeAquiJHipster",
+  "databaseType": "sql",
+  "entityTableName": "transaction",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "paymentForecast",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "ourNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "transactionStatus",
+      "fieldType": "TransactionsStatus",
+      "fieldValues": "Open,Received,Approved,Rejected,Expired"
+    },
+    {
+      "fieldName": "observation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "deletionDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "microserviceName": "SobeAquiJHipster",
+  "name": "Transaction",
+  "relationships": [
+    {
+      "otherEntityName": "feeListTransaction",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "feeListTransaction",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "invoice",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "invoice",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "transactionHistory",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "transactionHistory",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

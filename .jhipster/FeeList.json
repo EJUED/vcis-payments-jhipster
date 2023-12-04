@@ -1,0 +1,95 @@
+{
+  "applications": "*",
+  "changelogDate": "20231130182724",
+  "clientRootFolder": "SobeAquiJHipster",
+  "databaseType": "sql",
+  "entityTableName": "fee_list",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "documentType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "documentNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateRegistration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origin",
+      "fieldType": "HistoryOriginEnum",
+      "fieldValues": "POD,Vendas,RecebimentoDeGraos"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "HistoryTypeEnum",
+      "fieldValues": "TaxaDeBaixaDeVolumeDeIsencao,PrecoDaTecnologiaNaMoega,SeasonBonus,Vendas"
+    },
+    {
+      "fieldName": "erpCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "crop",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "revenueModel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "month",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "operationalYear",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "percentage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updateDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vendor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "poNumber",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "SobeAquiJHipster",
+  "name": "FeeList",
+  "relationships": [
+    {
+      "otherEntityName": "feeListTransaction",
+      "otherEntityRelationshipName": "feeList",
+      "relationshipName": "feeListTransaction",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

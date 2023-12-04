@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20231130182728",
+  "clientRootFolder": "SobeAquiJHipster",
+  "databaseType": "sql",
+  "entityTableName": "transaction_history",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "user",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "microserviceName": "SobeAquiJHipster",
+  "name": "TransactionHistory",
+  "relationships": [
+    {
+      "otherEntityName": "transaction",
+      "relationshipName": "transaction",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

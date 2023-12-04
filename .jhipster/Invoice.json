@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20231130182726",
+  "clientRootFolder": "SobeAquiJHipster",
+  "databaseType": "sql",
+  "entityTableName": "invoice",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "s3Url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "invoiceStatus",
+      "fieldType": "InvoicesStatusEnum",
+      "fieldValues": "Send,Approved,Rejected"
+    }
+  ],
+  "microserviceName": "SobeAquiJHipster",
+  "name": "Invoice",
+  "relationships": [
+    {
+      "otherEntityName": "transaction",
+      "relationshipName": "transaction",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "changelogDate": "20231130182725",
+  "clientRootFolder": "SobeAquiJHipster",
+  "databaseType": "sql",
+  "entityTableName": "fee_list_transaction",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "creationDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "deletionDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "microserviceName": "SobeAquiJHipster",
+  "name": "FeeListTransaction",
+  "relationships": [
+    {
+      "otherEntityName": "feeList",
+      "relationshipName": "feeList",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "transaction",
+      "relationshipName": "transaction",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}
